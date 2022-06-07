@@ -22,14 +22,22 @@ public class Game {
     }
 
     static void drawCells(Turtle turtle, Grid grid, Cell cell){
+        turtle.speed(10);
         for (int i = 1; i <= 25; i++) {
-            turtle.forward(cell.getCellWidth());
-
-            for (int j = 1; j <= 4; j++) {
-                turtle.left(90);
+            for (int j = 1; j <= 25; j++) {
                 turtle.forward(cell.getCellWidth());
-            }
 
+                for (int k = 1; k <= 4; k++) {
+                    turtle.left(90);
+                    turtle.forward(cell.getCellWidth());
+                }
+            }
+            turtle.up();
+            turtle.goTo(grid.getMinX(), grid.getMinY());
+            turtle.down();
+            turtle.left(90);
+            turtle.forward(cell.getCellWidth()*i);
+            turtle.right(90);
         }
 
     }
