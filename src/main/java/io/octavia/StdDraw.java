@@ -1035,4 +1035,16 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     public void keyReleased(KeyEvent e) {
         keysDown.remove(e.getKeyChar());
     }
+
+    public static void filledPolygonStart(int x, int y) {
+        int N = x;
+        GeneralPath path = new GeneralPath();
+        path.moveTo((float) scaleX(x), (float) scaleY(y));
+        for (int i = 0; i < N; i++)
+            path.lineTo((float) scaleX(x), (float) scaleY(y));
+        path.closePath();
+        offscreen.fill(path);
+        draw();
+        
+    }
 }

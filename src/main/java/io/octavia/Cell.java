@@ -1,35 +1,35 @@
 package io.octavia;
 
 public class Cell {
-    private final boolean isAlive;
-    private final int positionX;
-    private final int positionY;
-    private final int cellWidth = 20;
-    private final int cellHeight = 20;
+    private boolean alive;
+    private int x, y;
 
-    public Cell(boolean isAlive, int positionX, int positionY) {
-        this.isAlive = isAlive;
-        this.positionX = positionX;
-        this.positionY = positionY;
+    public Cell(boolean alive, int x, int y) {
+        this.alive = alive;
+        this.x = x;
+        this.y = y;
     }
 
     public boolean isAlive() {
-        return isAlive;
+        return alive;
     }
 
-    public int getCellWidth() {
-        return cellWidth;
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 
-    public int getCellHeight() {
-        return cellHeight;
+    public int getX() {
+        return x;
     }
 
-    public int getPositionX() {
-        return positionX;
+    public int getY() {
+        return y;
     }
 
-    public int getPositionY() {
-        return positionY;
+    public void setX(int x) {
+        this.x = x;
+    }
+    public void setY(int y) {
+        this.y = y;
     }
 }
