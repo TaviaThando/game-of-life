@@ -32,8 +32,9 @@ public class Drawing {
                 // Only draw the cell if it is within the boundaries
                 if (x >= minX && x <= maxX && y >= minY && y <= maxY) {
                     cell.setAlive(Math.random() < 0.5); // Randomly set cell state for demonstration
+                    
                     if (cell.isAlive()) {
-                        turtle.setColor("pink");
+                        turtle.setColor("white");
 
                         // Draw a filled rectangle for the alive cell
                         turtle.up();

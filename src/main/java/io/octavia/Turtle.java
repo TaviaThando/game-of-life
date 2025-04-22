@@ -624,21 +624,4 @@ public class Turtle {
         sc.close();
         System.out.println("The turtle is no longer interactive from this console.");
     }
-
-    public void setColor(String color) {
-        // Set the pen color using the color name or hex value
-        penColor = getColor(color);
-        StdDraw.setPenColor(penColor);
-    }
-
-    public void beginFill(int xCoords, int yCoords) {
-        // Start filling by setting the fill color
-        StdDraw.setPenColor(penColor);
-        StdDraw.filledPolygonStart(xCoords, yCoords); 
-    }
-
-    public void endFill(int xCoords, int yCoords) {
-        // End filling by completing the filled polygon
-        StdDraw.filledPolygonStart(xCoords, yCoords); 
-    }
 }
